@@ -1,0 +1,54 @@
+ [
+    {
+        "Id":1,
+        "SellRent":1,
+        "Name":"Khan House",
+        "Type":"House",
+        "Price":1200,
+        "Image":"house1"
+    },
+    {
+        "Id":2,
+        "SellRent":1,
+        "Name":"Tareen House",
+        "Type":"House",
+        "Price":1500,
+        "Image":"house2"
+    }, 
+    {
+        "Id":3,
+        "SellRent":2,
+        "Name":"Wahab House",
+        "Type":"House",
+        "Price":1100,
+        "Image":"house3"
+    },
+    {
+        "Id":4,
+        "SellRent":1,
+        "Name":"Waleed House",
+        "Type":"House",
+        "Price":1300,
+        "Image":"house4"
+    },
+    {
+        "Id":5,
+        "SellRent":2,
+        "Name":"Mohsin House",
+        "Type":"House",
+        "Price":1600,
+        "Image":"house5"
+    },
+    {
+        "Id":6,
+        "SellRent":1,
+        "Name":"Mian House",
+        "Type":"House",
+        "Price":1000,
+        "Image":""
+    }
+ ]   
+ 
+    
+    
+
