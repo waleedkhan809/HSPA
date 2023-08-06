@@ -25,8 +25,7 @@ export class PropertListComponent implements OnInit {
         data=> 
         {
           this.properties = data;
-          console.log(data),
-          
+          console.log(data)
         },
         error =>(console.log(error))
       )

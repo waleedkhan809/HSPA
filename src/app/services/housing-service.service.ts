@@ -14,17 +14,11 @@ export class HousingServiceService {
   getAllProperties(SellRent:number) : Observable<IProperty[]>
   {
     return this.http.get<IProperty[]>('assets/properties.json').pipe(
-      map((data: IProperty[]) => {
-        const properties: IProperty[] = data.map((item) => ({
-          Id: item.Id,
-          Name: item.Name,
-          Type: item.Type,
-          Price: item.Price,
-          Image:item.Image,
-          SellRent:item.SellRent
-        }));
+      map((data: IProperty[]) => 
+      {
+        const properties: IProperty[] = data.filter(item => item.SellRent == SellRent);
         return properties;
-        })
+      })
     );
   }
 }

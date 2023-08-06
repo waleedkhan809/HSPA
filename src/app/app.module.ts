@@ -16,8 +16,8 @@ import { PropertyDetailComponent } from './property/property-detail/property-det
 
 const appRoutes : Routes = [
   {path:'',component:PropertListComponent},
-  {path:'buy-property',component:BuyPropertyComponent},
-  {path:'sell-property',component:SellPropertyComponent},
+  {path:'buy-property',component:PropertListComponent},
+  {path:'sell-property',component:PropertListComponent},
   {path:'list-property',component:ListPropertyComponent},
   {path:'property-detail/:id',component:PropertyDetailComponent}
 ]
