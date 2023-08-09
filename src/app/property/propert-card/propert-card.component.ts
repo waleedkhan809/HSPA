@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IProperty } from '../IProperty.interface';
 import { Route, Router } from '@angular/router';
+import { Iproperty } from 'src/app/model/iproperty';
 
 @Component({
   selector: 'app-propert-card',
@@ -9,7 +9,8 @@ import { Route, Router } from '@angular/router';
 })
 export class PropertCardComponent implements OnInit 
 {
-  @Input() property!: IProperty;
+  @Input() property?: Iproperty;
+  @Input() displayButt?: boolean;
   constructor(private route: Router) { }
 
   ngOnInit() {

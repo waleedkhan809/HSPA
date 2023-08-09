@@ -1,8 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { HousingServiceService } from 'src/app/services/housing-service.service';
-import { IProperty } from '../IProperty.interface';
 import { ActivatedRoute } from '@angular/router';
+import { Iproperty } from 'src/app/model/iproperty';
 
 @Component({
   selector: 'app-propert-list',
@@ -13,7 +13,7 @@ export class PropertListComponent implements OnInit {
 
   constructor(private housingService:HousingServiceService,private route:ActivatedRoute) { }
   SellRent = 1;
-  properties:Array<IProperty>=[];
+  properties:Array<Iproperty>=[];
   ngOnInit() : void 
   {
     if(this.route.snapshot.url.toString())

@@ -9,19 +9,24 @@ import { AlertifyServiceService } from '../services/alertify-service.service';
 })
 export class NavbarComponent implements OnInit {
 
+  loggedInUserName?:string;
   userLoggedIn? :boolean;
   constructor(private router:Router,private alertService:AlertifyServiceService) { }
 
   ngOnInit() {
   }
   isLoggedIn()
-  {
-    return localStorage.getItem('token');
+  { 
+    if(localStorage.getItem('token')!==null)
+    {
+      return this.loggedInUserName = localStorage.getItem('token') as string;
+    }
+    return;
   }
   loggedOut()
   { 
     localStorage.removeItem('token');
-    this.alertService.error("User Loggedout Successfully");
+    this.alertService.error("User Logged out Successfully");
     this.router.navigate(['user-login']);
   }
 

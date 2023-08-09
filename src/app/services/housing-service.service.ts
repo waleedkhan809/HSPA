@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {map} from 'rxjs/operators'
-import { IProperty } from '../property/IProperty.interface';
+
 import { Observable } from 'rxjs';
+import { Iproperty } from '../model/iproperty';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,12 @@ export class HousingServiceService {
 
   constructor(private http:HttpClient) { }
 
-  getAllProperties(SellRent:number) : Observable<IProperty[]>
+  getAllProperties(SellRent:number) : Observable<Iproperty[]>
   {
-    return this.http.get<IProperty[]>('assets/properties.json').pipe(
-      map((data: IProperty[]) => 
+    return this.http.get<Iproperty[]>('assets/properties.json').pipe(
+      map((data: Iproperty[]) => 
       {
-        const properties: IProperty[] = data.filter(item => item.SellRent == SellRent);
+        const properties: Iproperty[] = data.filter(item => item.SellRent == SellRent);
         return properties;
       })
     );
